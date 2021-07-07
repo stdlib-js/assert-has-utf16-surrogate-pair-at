@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/assert-has-utf16-surrogate-pair-at",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Test if a position in a string marks the start of a UTF-16 surrogate pair.",
   "license": "Apache-2.0",
   "author": {
