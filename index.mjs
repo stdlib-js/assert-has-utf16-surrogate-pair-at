@@ -1,4 +1,0 @@
-// Copyright (c) 2022 The Stdlib Authors. License is Apache-2.0: http://www.apache.org/licenses/LICENSE-2.0
-/// <reference types="./index.d.ts" />
-import i from"https://cdn.jsdelivr.net/gh/stdlib-js/assert-is-string@esm/index.mjs";import e from"https://cdn.jsdelivr.net/gh/stdlib-js/assert-is-nonnegative-integer@esm/index.mjs";import r from"https://cdn.jsdelivr.net/gh/stdlib-js/error-tools-fmtprodmsg@esm/index.mjs";var t=i.isPrimitive,s=e.isPrimitive,n=r;var o=function(i,e){var r,o;if(!t(i))throw new TypeError(n("01t3N",i));if(!s(e))throw new TypeError(n("invalid argument. Must provide a valid position (i.e., a nonnegative integer). Value: `%s`.",e));if(e>=i.length)throw new RangeError(n("invalid argument. Must provide a valid position (i.e., within string bounds). Value: `%u`.",e));return r=i.charCodeAt(e),o=i.charCodeAt(e+1),r>=55296&&r<=56319&&o>=56320&&o<=57343};export{o as default};
-//# sourceMappingURL=index.mjs.map
