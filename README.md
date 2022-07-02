@@ -53,7 +53,9 @@ If no recognized module system is present, access bundle contents via the global
 ```html
 <script type="text/javascript">
 (function () {
+(function () {
     window.hasUTF16SurrogatePairAt;
+})();
 })();
 </script>
 ```
@@ -97,6 +99,7 @@ bool = hasUTF16SurrogatePairAt( '🌷', 1 );
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/assert-has-utf16-surrogate-pair-at@umd/browser.js"></script>
 <script type="text/javascript">
 (function () {
+(function () {
 
 var bool = hasUTF16SurrogatePairAt( '🌷', 0 );
 // returns true
@@ -105,6 +108,7 @@ bool = hasUTF16SurrogatePairAt( '🌷', 1 );
 // returns false
 
 
+})();
 })();
 </script>
 </body>
