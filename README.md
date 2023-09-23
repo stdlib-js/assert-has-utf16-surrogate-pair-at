@@ -42,7 +42,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import hasUTF16SurrogatePairAt from 'https://cdn.jsdelivr.net/gh/stdlib-js/assert-has-utf16-surrogate-pair-at@deno/mod.js';
+import hasUTF16SurrogatePairAt from 'https://cdn.jsdelivr.net/gh/stdlib-js/assert-has-utf16-surrogate-pair-at@v0.1.0-deno/mod.js';
 ```
 
 #### hasUTF16SurrogatePairAt( string, position )
@@ -78,7 +78,7 @@ bool = hasUTF16SurrogatePairAt( '🌷', 1 );
 <!-- eslint no-undef: "error" -->
 
 ```javascript
-import hasUTF16SurrogatePairAt from 'https://cdn.jsdelivr.net/gh/stdlib-js/assert-has-utf16-surrogate-pair-at@deno/mod.js';
+import hasUTF16SurrogatePairAt from 'https://cdn.jsdelivr.net/gh/stdlib-js/assert-has-utf16-surrogate-pair-at@v0.1.0-deno/mod.js';
 
 var bool = hasUTF16SurrogatePairAt( '🌷', 0 );
 // returns true
