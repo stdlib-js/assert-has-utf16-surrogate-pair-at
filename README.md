@@ -35,19 +35,87 @@ limitations under the License.
 
 > Test if a position in a string marks the start of a [UTF-16][utf-16] surrogate pair.
 
+<section class="installation">
 
+## Installation
 
+```bash
+npm install @stdlib/assert-has-utf16-surrogate-pair-at
+```
 
+Alternatively,
 
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+-   To use as a general utility for the command line, install the corresponding [CLI package][cli-section] globally.
 
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
 
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
 
+</section>
 
+<section class="usage">
 
+## Usage
+
+```javascript
+var hasUTF16SurrogatePairAt = require( '@stdlib/assert-has-utf16-surrogate-pair-at' );
+```
+
+#### hasUTF16SurrogatePairAt( string, position )
+
+Tests if a `position` (in [UTF-16][utf-16] code units) in a `string` marks the start of a [UTF-16][utf-16] surrogate pair.
+
+```javascript
+var bool = hasUTF16SurrogatePairAt( '🌷', 0 );
+// returns true
+
+bool = hasUTF16SurrogatePairAt( '🌷', 1 );
+// returns false
+```
+
+</section>
+
+<!-- /.usage -->
+
+<section class="notes">
+
+## Notes
+
+-   Note that `position` does **not** refer to a visual character position, but to an index in the ordered sequence of [UTF-16][utf-16] code units.
+
+</section>
+
+<!-- /.notes -->
+
+<section class="examples">
+
+## Examples
+
+<!-- eslint no-undef: "error" -->
+
+```javascript
+var hasUTF16SurrogatePairAt = require( '@stdlib/assert-has-utf16-surrogate-pair-at' );
+
+var bool = hasUTF16SurrogatePairAt( '🌷', 0 );
+// returns true
+
+bool = hasUTF16SurrogatePairAt( '🌷', 1 );
+// returns false
+
+```
+
+</section>
+
+<!-- /.examples -->
+
+* * *
 
 <section class="cli">
 
-
+## CLI
 
 <section class="installation">
 
@@ -65,7 +133,7 @@ npm install -g @stdlib/assert-has-utf16-surrogate-pair-at-cli
 
 <section class="usage">
 
-## Usage
+### Usage
 
 ```text
 Usage: has-utf16-surrogate-pair-at [options] [<string>] --pos=<index>
@@ -83,7 +151,7 @@ Options:
 
 <section class="examples">
 
-## Examples
+### Examples
 
 ```bash
 $ has-utf16-surrogate-pair-at --pos=0 🌷
@@ -109,11 +177,6 @@ false
 
 <section class="related">
 
-## See Also
-
--   <span class="package-name">[`@stdlib/assert-has-utf16-surrogate-pair-at`][@stdlib/assert-has-utf16-surrogate-pair-at]</span><span class="delimiter">: </span><span class="description">test if a position in a string marks the start of a UTF-16 surrogate pair.</span>
-
-
 </section>
 
 <!-- /.related -->
@@ -131,7 +194,7 @@ This package is part of [stdlib][stdlib], a standard library for JavaScript and 
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
-### Community
+#### Community
 
 [![Chat][chat-image]][chat-url]
 
@@ -144,7 +207,7 @@ See [LICENSE][stdlib-license].
 
 ## Copyright
 
-Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
+Copyright &copy; 2016-2025. The Stdlib [Authors][stdlib-authors].
 
 </section>
 
@@ -154,8 +217,8 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 
 <section class="links">
 
-[npm-image]: http://img.shields.io/npm/v/@stdlib/assert-has-utf16-surrogate-pair-at-cli.svg
-[npm-url]: https://npmjs.org/package/@stdlib/assert-has-utf16-surrogate-pair-at-cli
+[npm-image]: http://img.shields.io/npm/v/@stdlib/assert-has-utf16-surrogate-pair-at.svg
+[npm-url]: https://npmjs.org/package/@stdlib/assert-has-utf16-surrogate-pair-at
 
 [test-image]: https://github.com/stdlib-js/assert-has-utf16-surrogate-pair-at/actions/workflows/test.yml/badge.svg?branch=main
 [test-url]: https://github.com/stdlib-js/assert-has-utf16-surrogate-pair-at/actions/workflows/test.yml?query=branch:main
