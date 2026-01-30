@@ -35,38 +35,33 @@ limitations under the License.
 
 > Test if a position in a string marks the start of a [UTF-16][utf-16] surrogate pair.
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/assert-has-utf16-surrogate-pair-at
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+-   To use as a general utility for the command line, install the corresponding [CLI package][cli-section] globally.
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-hasUTF16SurrogatePairAt = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/assert-has-utf16-surrogate-pair-at@umd/browser.js' )
-```
-
-To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
-
-```javascript
-var hasUTF16SurrogatePairAt = require( 'path/to/vendor/umd/assert-has-utf16-surrogate-pair-at/index.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/assert-has-utf16-surrogate-pair-at@umd/browser.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.hasUTF16SurrogatePairAt;
-})();
-</script>
+var hasUTF16SurrogatePairAt = require( '@stdlib/assert-has-utf16-surrogate-pair-at' );
 ```
 
 #### hasUTF16SurrogatePairAt( string, position )
@@ -101,13 +96,8 @@ bool = hasUTF16SurrogatePairAt( '🌷', 1 );
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/assert-has-utf16-surrogate-pair-at@umd/browser.js"></script>
-<script type="text/javascript">
-(function () {
+```javascript
+var hasUTF16SurrogatePairAt = require( '@stdlib/assert-has-utf16-surrogate-pair-at' );
 
 var bool = hasUTF16SurrogatePairAt( '🌷', 0 );
 // returns true
@@ -115,18 +105,73 @@ var bool = hasUTF16SurrogatePairAt( '🌷', 0 );
 bool = hasUTF16SurrogatePairAt( '🌷', 1 );
 // returns false
 
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
 
 <!-- /.examples -->
 
+* * *
 
+<section class="cli">
+
+## CLI
+
+<section class="installation">
+
+## Installation
+
+To use as a general utility, install the CLI package globally
+
+```bash
+npm install -g @stdlib/assert-has-utf16-surrogate-pair-at-cli
+```
+
+</section>
+
+<!-- CLI usage documentation. -->
+
+<section class="usage">
+
+### Usage
+
+```text
+Usage: has-utf16-surrogate-pair-at [options] [<string>] --pos=<index>
+
+Options:
+
+  -h,    --help                Print this message.
+  -V,    --version             Print the package version.
+         --pos index           Position in string.
+```
+
+</section>
+
+<!-- /.usage -->
+
+<section class="examples">
+
+### Examples
+
+```bash
+$ has-utf16-surrogate-pair-at --pos=0 🌷
+true
+```
+
+To use as a [standard stream][standard-streams],
+
+```bash
+$ echo -n '🌷' | has-utf16-surrogate-pair-at --pos=1
+false
+```
+
+</section>
+
+<!-- /.examples -->
+
+</section>
+
+<!-- /.cli -->
 
 <!-- Section for related `stdlib` packages. Do not manually edit this section, as it is automatically populated. -->
 
@@ -162,7 +207,7 @@ See [LICENSE][stdlib-license].
 
 ## Copyright
 
-Copyright &copy; 2016-2025. The Stdlib [Authors][stdlib-authors].
+Copyright &copy; 2016-2026. The Stdlib [Authors][stdlib-authors].
 
 </section>
 
@@ -188,8 +233,8 @@ Copyright &copy; 2016-2025. The Stdlib [Authors][stdlib-authors].
 
 -->
 
-[chat-image]: https://img.shields.io/gitter/room/stdlib-js/stdlib.svg
-[chat-url]: https://app.gitter.im/#/room/#stdlib-js_stdlib:gitter.im
+[chat-image]: https://img.shields.io/badge/zulip-join_chat-brightgreen.svg
+[chat-url]: https://stdlib.zulipchat.com
 
 [stdlib]: https://github.com/stdlib-js/stdlib
 
